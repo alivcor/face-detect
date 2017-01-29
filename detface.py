@@ -21,12 +21,12 @@ while True:
         scaleFactor=1.1,
         minNeighbors=5,
         minSize=(30, 30),
-        #flags=cv2.cv.CV_HAAR_SCALE_IMAGE
+        # flags=cv2.CASCADE_SCALE_IMAGE
     )
 
     # Draw a rectangle around the faces
     for (x, y, w, h) in faces:
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (70, 45, 200), 2)
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 225, 225), 2)
 
     # Display the resulting frame
     cv2.imshow('Video', frame)
@@ -37,4 +37,3 @@ while True:
 # When everything is done, release the capture
 video_capture.release()
 cv2.destroyAllWindows()
-
